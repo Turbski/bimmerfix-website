@@ -3,202 +3,738 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BimmerFix - Professional BMW Diagnostics | Decode Fault Codes Instantly</title>
-    <meta name="description" content="Professional BMW fault code diagnostics. Get repair steps, parts, and cost estimates for N54, N55, N20, and B58 engines instantly.">
-    <link rel="stylesheet" href="css/style.css">
+    <title>BimmerFix - Professional BMW Diagnostics & Live Data</title>
+    <meta name="description" content="Professional-grade BMW diagnostics. Live data logging, fault code reading, VIN decoding, and repair guides. Supports E/F/G chassis with MHD WiFi, ENET, and K+DCAN adapters.">
+    <meta name="keywords" content="BMW diagnostics, fault codes, OBD2, MHD adapter, ENET, K+DCAN, N54, N55, B58, live data, BMW repair">
+    <meta property="og:title" content="BimmerFix - Professional BMW Diagnostics">
+    <meta property="og:description" content="Professional-grade diagnostics for every BMW. Live data, fault codes, repair guides.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 8H4V16H20V8Z" stroke="#1C69D4" stroke-width="2"/>
-                        <path d="M12 8V16" stroke="#1C69D4" stroke-width="2"/>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!--  NAVIGATION                                 -->
+    <!-- ═══════════════════════════════════════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                <div class="logo-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
                     </svg>
-                    <span>BimmerFix</span>
                 </div>
-                <div class="nav-links">
-                    <a href="#features">Features</a>
-                    <a href="pricing.html">Pricing</a>
-                    <a href="#about">About</a>
-                    <a href="diagnostics.html" class="btn-primary">Start Diagnosis</a>
-                </div>
+                <span class="logo-text">BimmerFix</span>
+            </a>
+
+            <div class="nav-links" id="nav-links">
+                <a href="#features">Features</a>
+                <a href="#vehicles">Vehicles</a>
+                <a href="#compare">Compare</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
             </div>
+
+            <div class="nav-actions">
+                <a href="/login" class="nav-login">Log In</a>
+                <a href="/register" class="btn btn-primary btn-sm">Get Started Free</a>
+            </div>
+
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#features">Features</a>
+        <a href="#vehicles">Vehicles</a>
+        <a href="#compare">Compare</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <div class="mobile-menu-actions">
+            <a href="/login" class="btn btn-ghost">Log In</a>
+            <a href="/register" class="btn btn-primary">Get Started Free</a>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!--  HERO                                       -->
+    <!-- ═══════════════════════════════════════════ -->
     <section class="hero">
-        <div class="hero-overlay"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-grid-bg"></div>
         <div class="container">
             <div class="hero-content">
-                <div class="badge">
-                    <span class="badge-dot"></span>
-                    Live Database: 30,000+ Codes
+                <div class="hero-badge">
+                    <span class="badge-pulse"></span>
+                    Now supporting G-chassis &amp; MHD WiFi adapters
                 </div>
-                <h1>Professional<br><span class="text-blue">BMW Diagnostics</span></h1>
-                <p class="hero-subtitle">Stop guessing. Get dealership-level insights, repair steps,<br>and parts estimates for your BMW fault codes instantly.</p>
-                <div class="hero-buttons">
-                    <a href="diagnostics.html" class="btn-large btn-primary">
-                        Start Diagnosis
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M7.5 15L12.5 10L7.5 5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                <h1 class="hero-title">
+                    Professional-Grade<br>
+                    <span class="text-gradient">BMW Diagnostics</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Live data logging. Full ECU scanning. Module coding. Fault code reading with repair guides.
+                    One platform for E, F, G, and I-chassis &mdash; no dealer required.
+                </p>
+                <div class="hero-cta">
+                    <a href="/register" class="btn btn-primary btn-lg">
+                        Get Started Free
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 10h10M12 7l3 3-3 3"/>
                         </svg>
                     </a>
-                    <a href="#models" class="btn-large btn-secondary">View Supported Models</a>
+                    <a href="#features" class="btn btn-ghost btn-lg">
+                        See Features
+                    </a>
                 </div>
-                <div class="hero-badges">
-                    <div class="trust-badge">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M9 16.5L4 12L5.5 10.5L9 14L14.5 8.5L16 10L9 16.5Z" fill="#1C69D4"/>
-                        </svg>
-                        Verified Repairs
+                <div class="hero-proof">
+                    <div class="proof-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>30,000+ fault codes</span>
                     </div>
-                    <div class="trust-badge">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M10 2L12 8H18L13 12L15 18L10 14L5 18L7 12L2 8H8L10 2Z" fill="#1C69D4"/>
-                        </svg>
-                        Mechanic Approved
+                    <div class="proof-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>19 ECU modules</span>
+                    </div>
+                    <div class="proof-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>3 adapter types</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="dashboard-frame">
+                    <div class="dash-top-bar">
+                        <div class="dash-status">
+                            <span class="dash-status-dot"></span>
+                            CONNECTED
+                        </div>
+                        <span class="dash-vehicle">2024 BMW 335i</span>
+                    </div>
+                    <div class="dash-rpm-arc">
+                        <div class="dash-rpm-ring">
+                            <div class="dash-rpm-inner">
+                                <div class="dash-rpm-value">3,847</div>
+                                <div class="dash-rpm-label">RPM</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dash-bottom-row">
+                        <div class="dash-bottom-gauge">
+                            <div class="dash-bottom-gauge-label">BOOST</div>
+                            <div class="dash-bottom-gauge-value">14.2 psi</div>
+                            <div class="dash-bottom-gauge-bar"><div class="dash-bottom-gauge-fill" style="width:68%"></div></div>
+                        </div>
+                        <div class="dash-bottom-gauge">
+                            <div class="dash-bottom-gauge-label">LAMBDA</div>
+                            <div class="dash-bottom-gauge-value">0.98</div>
+                            <div class="dash-bottom-gauge-bar"><div class="dash-bottom-gauge-fill" style="width:49%"></div></div>
+                        </div>
+                        <div class="dash-bottom-gauge">
+                            <div class="dash-bottom-gauge-label">TIMING</div>
+                            <div class="dash-bottom-gauge-value">12.4&deg;</div>
+                            <div class="dash-bottom-gauge-bar"><div class="dash-bottom-gauge-fill" style="width:52%"></div></div>
+                        </div>
+                    </div>
+                    <div class="dash-alert-bar">
+                        <span class="dash-alert-dot"></span>
+                        2 Active DTCs &mdash; Tap to view
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- ═══════════════════════════════════════════ -->
+    <!--  SOCIAL PROOF STRIP                         -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="proof-strip">
+        <div class="container">
+            <div class="proof-strip-inner">
+                <div class="proof-stat">
+                    <span class="stat-number" data-count="30000">30,000+</span>
+                    <span class="stat-label">Fault Codes</span>
+                </div>
+                <div class="proof-divider"></div>
+                <div class="proof-stat">
+                    <span class="stat-number">19</span>
+                    <span class="stat-label">ECU Modules</span>
+                </div>
+                <div class="proof-divider"></div>
+                <div class="proof-stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Live Data PIDs</span>
+                </div>
+                <div class="proof-divider"></div>
+                <div class="proof-stat">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Adapter Types</span>
+                </div>
+                <div class="proof-divider"></div>
+                <div class="proof-stat">
+                    <span class="stat-number">E / F / G / I</span>
+                    <span class="stat-label">All Chassis</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!--  FEATURES                                   -->
+    <!-- ═══════════════════════════════════════════ -->
     <section id="features" class="features">
         <div class="container">
             <div class="section-header">
-                <h2>Why Enthusiasts Trust BimmerFix</h2>
-                <p>Designed specifically for the complexities of modern BMW engines.</p>
+                <span class="section-tag">Features</span>
+                <h2>Everything You Need.<br>Nothing You Don't.</h2>
+                <p>One tool that replaces your entire diagnostic stack. Built by enthusiasts who actually wrench on their own cars.</p>
             </div>
+
             <div class="features-grid">
-                <div class="feature-card">
+                <!-- Feature 1: Live Data -->
+                <div class="feature-card feature-card-highlight">
                     <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <rect x="6" y="10" width="20" height="12" stroke="#1C69D4" stroke-width="2"/>
-                            <path d="M16 10V22" stroke="#1C69D4" stroke-width="2"/>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
                         </svg>
                     </div>
-                    <h3>Engine Specific</h3>
-                    <p>Generic scanners don't tell the whole story. We account for specific N54, N55, and B58 nuances.</p>
+                    <h3>Live Data Logging</h3>
+                    <p>Stream real-time engine data at up to 20&nbsp;Hz. RPM, boost, coolant, oil temp, lambda, timing advance, knock counts &mdash; all on one screen with peak tracking.</p>
+                    <div class="feature-tags">
+                        <span>10-20 Hz</span>
+                        <span>CSV Export</span>
+                        <span>Peak Tracking</span>
+                    </div>
                 </div>
+
+                <!-- Feature 2: Fault Codes -->
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <path d="M16 6L18 14H26L19 19L21 27L16 22L11 27L13 19L6 14H14L16 6Z" stroke="#1C69D4" stroke-width="2"/>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
                         </svg>
                     </div>
-                    <h3>Actionable Repairs</h3>
-                    <p>Don't just get a definition. Get step-by-step repair guides, difficulty ratings, and labor estimates.</p>
+                    <h3>Full ECU Scan</h3>
+                    <p>Scan all 19 ECU modules in one pass. Read and clear DTCs with status flags. Plus, access the coding module to customize comfort features and enable hidden options.</p>
+                    <div class="feature-tags">
+                        <span>19 Modules</span>
+                        <span>Read &amp; Clear</span>
+                    </div>
                 </div>
+
+                <!-- Feature 3: VIN Decode -->
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <circle cx="16" cy="16" r="10" stroke="#1C69D4" stroke-width="2"/>
-                            <path d="M16 11V16L20 18" stroke="#1C69D4" stroke-width="2"/>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
                         </svg>
                     </div>
-                    <h3>Parts & Pricing</h3>
-                    <p>Know exactly what to buy. We link to the right parts with accurate price ranges.</p>
+                    <h3>VIN Decoder</h3>
+                    <p>Decode any BMW VIN to chassis, engine, production plant, model year, and body style. Supports all WBA/WBS/WBY/5UX prefixes with check digit validation.</p>
+                    <div class="feature-tags">
+                        <span>200+ Models</span>
+                        <span>Engine ID</span>
+                    </div>
+                </div>
+
+                <!-- Feature 4: Repair Guides -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                        </svg>
+                    </div>
+                    <h3>Repair Guides</h3>
+                    <p>Every fault code links to engine-specific repair steps, difficulty ratings, estimated labor time, and OEM part numbers with pricing. No more guesswork.</p>
+                    <div class="feature-tags">
+                        <span>Step-by-Step</span>
+                        <span>Parts &amp; Cost</span>
+                    </div>
+                </div>
+
+                <!-- Feature 5: Multi-Adapter -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.143 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/>
+                        </svg>
+                    </div>
+                    <h3>3 Adapters, 1 App</h3>
+                    <p>Works with MHD WiFi, ENET cable, and K+DCAN Bluetooth. Switch adapters with one tap. Auto port scanning finds your adapter automatically.</p>
+                    <div class="feature-tags">
+                        <span>MHD WiFi</span>
+                        <span>ENET</span>
+                        <span>K+DCAN</span>
+                    </div>
+                </div>
+
+                <!-- Feature 6: Data Export -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                    </div>
+                    <h3>Export Everything</h3>
+                    <p>Export data logs as CSV, JSON, or MSL (MegaSquirt). Share fault code reports. Full debug logging for adapter communication troubleshooting.</p>
+                    <div class="feature-tags">
+                        <span>CSV</span>
+                        <span>JSON</span>
+                        <span>MSL</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Supported Models Section -->
-    <section id="models" class="models">
+    <!-- ═══════════════════════════════════════════ -->
+    <!--  HOW IT WORKS                               -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="how-it-works">
         <div class="container">
             <div class="section-header">
-                <h2>Supported Models</h2>
-                <p>Comprehensive coverage for modern BMW platforms</p>
+                <span class="section-tag">How It Works</span>
+                <h2>Three Steps. Full Visibility.</h2>
+                <p>From plug-in to diagnosis in under 60 seconds.</p>
             </div>
-            <div class="models-grid">
-                <div class="model-card">
-                    <h3>Engines</h3>
-                    <ul>
-                        <li>N54 (Twin Turbo I6)</li>
-                        <li>N55 (Single Turbo I6)</li>
-                        <li>N20 (Turbo I4)</li>
-                        <li>B58 (Turbo I6)</li>
-                        <li>B48 (Turbo I4)</li>
-                        <li>S55 (M3/M4)</li>
-                        <li>S58 (M3/M4 G8X)</li>
-                    </ul>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Connect Your Adapter</h3>
+                        <p>Plug your MHD WiFi, ENET, or K+DCAN adapter into the OBD-II port. Connect to the adapter's WiFi hotspot or Bluetooth.</p>
+                    </div>
                 </div>
-                <div class="model-card">
-                    <h3>Chassis</h3>
-                    <ul>
-                        <li>E90/E92/E93 (3 Series)</li>
-                        <li>E82 (1 Series)</li>
-                        <li>F30/F80 (3 Series/M3)</li>
-                        <li>F10 (5 Series)</li>
-                        <li>G20/G80 (3 Series/M3)</li>
-                    </ul>
+                <div class="step-line"></div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Scan &amp; Diagnose</h3>
+                        <p>BimmerFix automatically initializes the adapter and scans all 19 ECU modules. Fault codes appear with status flags and descriptions.</p>
+                    </div>
                 </div>
-                <div class="model-card">
-                    <h3>Common Codes</h3>
-                    <ul>
-                        <li>30FF (Underboost)</li>
-                        <li>2AAF (HPFP Failure)</li>
-                        <li>29E1 (Misfire)</li>
-                        <li>2A87 (Timing Chain)</li>
-                        <li>93B2 (Transmission)</li>
-                        <li>...and 25+ more</li>
-                    </ul>
+                <div class="step-line"></div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Fix &amp; Monitor</h3>
+                        <p>Follow engine-specific repair guides. Clear codes when done. Monitor live data to confirm the fix. Export logs for your records.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
+    <!-- ═══════════════════════════════════════════ -->
+    <!--  SUPPORTED VEHICLES                         -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="vehicles" class="vehicles">
         <div class="container">
-            <h2>Ready to Diagnose Your BMW?</h2>
-            <p>Get 3 free fault code lookups. No credit card required.</p>
-            <a href="diagnostics.html" class="btn-large btn-primary">Start Free Diagnosis →</a>
+            <div class="section-header">
+                <span class="section-tag">Compatibility</span>
+                <h2>Every Chassis. Every Engine.</h2>
+                <p>From the E90 to the G80 &mdash; if it has an OBD-II port, we support it.</p>
+            </div>
+
+            <div class="vehicles-grid">
+                <div class="vehicle-group">
+                    <h3>E-Chassis</h3>
+                    <div class="vehicle-tags">
+                        <span>E60 / E61</span>
+                        <span>E82 / E88</span>
+                        <span>E87</span>
+                        <span>E90 / E91</span>
+                        <span>E92 / E93</span>
+                        <span>E70 / E71</span>
+                        <span>E84</span>
+                        <span>E85 / E86</span>
+                        <span>E89</span>
+                    </div>
+                </div>
+                <div class="vehicle-group">
+                    <h3>F-Chassis</h3>
+                    <div class="vehicle-tags">
+                        <span>F10 / F11</span>
+                        <span>F20 / F21</span>
+                        <span>F22 / F23</span>
+                        <span>F30 / F31</span>
+                        <span>F32 / F33 / F36</span>
+                        <span>F80 M3</span>
+                        <span>F82 M4</span>
+                        <span>F87 M2</span>
+                        <span>F15 / F16</span>
+                        <span>F48</span>
+                    </div>
+                </div>
+                <div class="vehicle-group">
+                    <h3>G / I-Chassis</h3>
+                    <div class="vehicle-tags">
+                        <span>G20 / G21</span>
+                        <span>G22 / G23 / G26</span>
+                        <span>G30 / G31</span>
+                        <span>G80 M3</span>
+                        <span>G82 M4</span>
+                        <span>G87 M2</span>
+                        <span>G05 / G06</span>
+                        <span>G07</span>
+                        <span>G70</span>
+                    </div>
+                </div>
+                <div class="vehicle-group">
+                    <h3>Engines</h3>
+                    <div class="vehicle-tags">
+                        <span>N52</span>
+                        <span>N54</span>
+                        <span>N55</span>
+                        <span>N20</span>
+                        <span>B48</span>
+                        <span>B58</span>
+                        <span>S55</span>
+                        <span>S58</span>
+                        <span>S65 V8</span>
+                        <span>S63 V8</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ═══════════════════════════════════════════ -->
+    <!--  COMPARISON TABLE                           -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="compare" class="compare">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Why BimmerFix</span>
+                <h2>The Tool You've Been Missing</h2>
+                <p>See how BimmerFix stacks up against the tools you're already using.</p>
+            </div>
+
+            <div class="compare-table-wrapper">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th class="compare-highlight">BimmerFix</th>
+                            <th>MHD Flasher</th>
+                            <th>BimmerCode</th>
+                            <th>BimmerUtility</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Live Data Logging</td>
+                            <td class="compare-highlight"><span class="check">&#10003;</span> 20 Hz</td>
+                            <td><span class="check">&#10003;</span> Basic</td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="check">&#10003;</span> Limited</td>
+                        </tr>
+                        <tr>
+                            <td>Full ECU Scan (19 modules)</td>
+                            <td class="compare-highlight"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span> DME only</td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="partial">~</span> Some</td>
+                        </tr>
+                        <tr>
+                            <td>Read &amp; Clear DTCs</td>
+                            <td class="compare-highlight"><span class="check">&#10003;</span></td>
+                            <td><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="check">&#10003;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Repair Guides per Code</td>
+                            <td class="compare-highlight"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                        <tr>
+                            <td>VIN Decoder (engine, chassis)</td>
+                            <td class="compare-highlight"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="partial">~</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                        <tr>
+                            <td>MHD WiFi + ENET + K+DCAN</td>
+                            <td class="compare-highlight"><span class="check">&#10003;</span> All 3</td>
+                            <td>MHD only</td>
+                            <td>BT only</td>
+                            <td><span class="partial">~</span></td>
+                        </tr>
+                        <tr>
+                            <td>E + F + G + I Chassis</td>
+                            <td class="compare-highlight"><span class="check">&#10003;</span></td>
+                            <td><span class="partial">~</span> F/G only</td>
+                            <td><span class="check">&#10003;</span></td>
+                            <td><span class="partial">~</span></td>
+                        </tr>
+                        <tr>
+                            <td>Data Export (CSV/JSON/MSL)</td>
+                            <td class="compare-highlight"><span class="check">&#10003;</span></td>
+                            <td><span class="partial">~</span> CSV</td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Parts &amp; Cost Estimates</td>
+                            <td class="compare-highlight"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Module Coding</td>
+                            <td class="compare-highlight"><span class="check">&#10003;</span></td>
+                            <td><span class="check">&#10003;</span></td>
+                            <td><span class="check">&#10003;</span></td>
+                            <td><span class="partial">~</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!--  TESTIMONIALS                               -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What People Say</span>
+                <h2>Trusted by Enthusiasts &amp; Shops</h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Finally a diagnostic tool that actually understands BMW-specific codes. The repair guides alone saved me $800 on my N54 wastegate rattle fix."</p>
+                    <p class="testimonial-author">Marcus T.</p>
+                    <p class="testimonial-role">E92 335i Owner</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"We switched our shop from multiple tools to BimmerFix. The full ECU scan and PDF reports have streamlined our workflow completely."</p>
+                    <p class="testimonial-author">David R.</p>
+                    <p class="testimonial-role">Independent BMW Shop Owner</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"The live data logging at 20Hz is genuinely on par with dealer tools. I use it for every pull on my F80 M3."</p>
+                    <p class="testimonial-author">Jake S.</p>
+                    <p class="testimonial-role">BMW Performance Tuner</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!--  TRUST LOGOS                                -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="trust-logos">
+        <div class="container">
+            <div class="trust-logos-inner">
+                <span class="trust-logo">ISO 15765-4</span>
+                <span class="trust-logo">UDS Protocol</span>
+                <span class="trust-logo">OBD-II Certified</span>
+                <span class="trust-logo">256-bit Encrypted</span>
+                <span class="trust-logo">GDPR Compliant</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!--  PRICING                                    -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Pricing</span>
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Start free. Upgrade when you need more.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Free -->
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3>Free</h3>
+                        <div class="price-amount">
+                            <span class="price-currency">$</span>
+                            <span class="price-value">0</span>
+                        </div>
+                        <p class="price-period">forever</p>
+                    </div>
+                    <ul class="price-features">
+                        <li><span class="check">&#10003;</span> 3 fault code lookups / day</li>
+                        <li><span class="check">&#10003;</span> VIN decoder</li>
+                        <li><span class="check">&#10003;</span> Basic repair info</li>
+                        <li><span class="check">&#10003;</span> Community access</li>
+                    </ul>
+                    <a href="/register" class="btn btn-ghost btn-block">Get Started</a>
+                </div>
+
+                <!-- Pro -->
+                <div class="price-card price-card-featured">
+                    <div class="price-badge">Most Popular</div>
+                    <div class="price-header">
+                        <h3>Pro</h3>
+                        <div class="price-amount">
+                            <span class="price-currency">$</span>
+                            <span class="price-value">49</span>
+                            <span class="price-period-inline">/mo</span>
+                        </div>
+                        <p class="price-period">billed monthly</p>
+                    </div>
+                    <ul class="price-features">
+                        <li><span class="check">&#10003;</span> Unlimited fault code lookups</li>
+                        <li><span class="check">&#10003;</span> Full ECU scan &amp; clear</li>
+                        <li><span class="check">&#10003;</span> Live data logging (20 Hz)</li>
+                        <li><span class="check">&#10003;</span> BMW-specific coding module</li>
+                        <li><span class="check">&#10003;</span> Repair guides + OEM parts pricing</li>
+                        <li><span class="check">&#10003;</span> Data export (CSV/JSON/MSL)</li>
+                        <li><span class="check">&#10003;</span> Debug log &amp; raw UDS commands</li>
+                        <li><span class="check">&#10003;</span> Priority email support</li>
+                    </ul>
+                    <a href="/register" class="btn btn-primary btn-block">Start Free Trial</a>
+                </div>
+
+                <!-- Shop -->
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3>Shop</h3>
+                        <div class="price-amount">
+                            <span class="price-currency">$</span>
+                            <span class="price-value">149</span>
+                            <span class="price-period-inline">/mo</span>
+                        </div>
+                        <p class="price-period">per technician</p>
+                    </div>
+                    <ul class="price-features">
+                        <li><span class="check">&#10003;</span> Everything in Pro</li>
+                        <li><span class="check">&#10003;</span> Multi-vehicle garage (unlimited)</li>
+                        <li><span class="check">&#10003;</span> Customer diagnostic reports (PDF)</li>
+                        <li><span class="check">&#10003;</span> Torque spec database</li>
+                        <li><span class="check">&#10003;</span> Team management &amp; technician accounts</li>
+                        <li><span class="check">&#10003;</span> API access for shop integrations</li>
+                        <li><span class="check">&#10003;</span> Dedicated account manager</li>
+                        <li><span class="check">&#10003;</span> White-label reports with shop branding</li>
+                    </ul>
+                    <a href="/register" class="btn btn-ghost btn-block">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!--  FAQ                                        -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2>Common Questions</h2>
+            </div>
+
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>What adapter do I need?</summary>
+                    <p>BimmerFix works with three adapter types: <strong>MHD WiFi</strong> (recommended for most users &mdash; connects via WiFi hotspot), <strong>ENET cable</strong> (for F/G/I chassis &mdash; connects via Ethernet-to-OBD), and <strong>K+DCAN</strong> (for E-chassis &mdash; connects via Bluetooth serial). You can buy any of these from Amazon or specialized BMW parts suppliers for $20&ndash;$80.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Which BMWs are supported?</summary>
+                    <p>All BMW models from 2005+ with an OBD-II port. This includes E-chassis (E60, E82, E87, E90, E92, E93), F-chassis (F10, F20, F30, F80, F82, F87), G-chassis (G20, G30, G80, G82, G87), and I-chassis electric models. Both gasoline and diesel engines are supported.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is this affiliated with BMW?</summary>
+                    <p><strong>No.</strong> BimmerFix is an independent third-party diagnostic tool. We are not affiliated with, endorsed by, or connected to BMW AG or any of its subsidiaries. BMW, the BMW logo, and all model names are trademarks of BMW AG.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I clear fault codes?</summary>
+                    <p>Yes. BimmerFix can clear DTCs from individual ECUs or all modules at once. It opens an extended diagnostic session, sends the UDS ClearDiagnosticInformation command (service 0x14), and confirms the clear. Note: clearing codes does not fix the underlying issue &mdash; always diagnose and repair first.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What live data can I see?</summary>
+                    <p>For the DME (engine computer): RPM, coolant temp, oil temp, intake temp, boost pressure, throttle position, engine load, mass airflow, battery voltage, fuel pressure, timing advance, lambda/AFR, knock counts, and camshaft position. Data rates up to 20 Hz depending on the number of parameters.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Does it support coding?</summary>
+                    <p>Yes. BimmerFix supports BMW module coding &mdash; change comfort settings, enable features, and customize your vehicle's behavior through the coding module available on Pro and Shop plans. Flash tuning is on the roadmap for a future release.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!--  FINAL CTA                                  -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="final-cta">
+        <div class="cta-glow"></div>
+        <div class="container">
+            <h2>Ready to Diagnose?</h2>
+            <p>Start with 3 free fault code lookups. No credit card. No commitment.</p>
+            <div class="cta-buttons">
+                <a href="/register" class="btn btn-primary btn-lg">
+                    Get Started Free
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 10h10M12 7l3 3-3 3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!--  FOOTER                                     -->
+    <!-- ═══════════════════════════════════════════ -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="logo">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M20 8H4V16H20V8Z" stroke="#1C69D4" stroke-width="2"/>
-                            <path d="M12 8V16" stroke="#1C69D4" stroke-width="2"/>
-                        </svg>
-                        <span>BimmerFix</span>
-                    </div>
-                    <p>Professional grade diagnostics for BMW enthusiasts.<br>Supported engines: N54, N55, N20, B58, B48.</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <div class="logo-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                            </svg>
+                        </div>
+                        <span class="logo-text">BimmerFix</span>
+                    </a>
+                    <p class="footer-desc">Professional-grade diagnostics for BMW enthusiasts and independent shops. Built with real vehicle data.</p>
                 </div>
-                <div class="footer-section">
+                <div class="footer-col">
                     <h4>Product</h4>
                     <a href="#features">Features</a>
-                    <a href="pricing.html">Pricing</a>
-                    <a href="#models">Supported Models</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#vehicles">Supported Vehicles</a>
+                    <a href="#compare">Comparison</a>
                 </div>
-                <div class="footer-section">
+                <div class="footer-col">
                     <h4>Resources</h4>
-                    <a href="#">Fault Code Database</a>
-                    <a href="#">Repair Guides</a>
-                    <a href="#">Community</a>
+                    <a href="/fault-lookup">Fault Code Database</a>
+                    <a href="/repair-guides">Repair Guides</a>
+                    <a href="/vin-decoder">VIN Decoder</a>
+                    <a href="/parts">Parts Lookup</a>
                 </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Service</a>
+                    <a href="mailto:support@bimmerfix.com">Contact</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2025 BimmerFix. Not affiliated with BMW AG.</p>
+                <p>&copy; 2026 BimmerFix. All rights reserved.</p>
+                <p class="footer-disclaimer">BimmerFix is not affiliated with, endorsed by, or connected to BMW AG or any of its subsidiaries. BMW and all associated names and logos are registered trademarks of Bayerische Motoren Werke AG.</p>
             </div>
         </div>
     </footer>
