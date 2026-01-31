@@ -399,6 +399,65 @@ img {
     flex-shrink: 0;
 }
 
+/* ─── Hero with Image Background ─── */
+.hero-with-image {
+    min-height: 100vh;
+    position: relative;
+}
+
+.hero-with-image .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-template-columns: unset;
+}
+
+.hero-image-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-image-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(9, 9, 11, 0.92) 0%,
+        rgba(9, 9, 11, 0.75) 40%,
+        rgba(9, 9, 11, 0.5) 100%
+    );
+}
+
+.hero-content-overlay {
+    position: relative;
+    z-index: 2;
+    max-width: 640px;
+}
+
+.hero-with-image .hero-glow,
+.hero-with-image .hero-grid-bg {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hero-image-overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(9, 9, 11, 0.9) 0%,
+            rgba(9, 9, 11, 0.8) 50%,
+            rgba(9, 9, 11, 0.7) 100%
+        );
+    }
+}
+
 /* ─── Phone Mockup ─── */
 .hero-visual {
     display: flex;
@@ -1364,6 +1423,15 @@ img {
     .hero .container {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+
+    .hero-with-image .container {
+        align-items: center;
+    }
+
+    .hero-content-overlay {
+        text-align: center;
+        margin: 0 auto;
     }
 
     .hero-subtitle { margin-left: auto; margin-right: auto; }
