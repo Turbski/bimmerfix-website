@@ -3,18 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BimmerFix - Professional BMW Diagnostics & Live Data</title>
-    <meta name="description" content="Professional-grade BMW diagnostics. Live data logging, fault code reading, VIN decoding, and repair guides. Supports E/F/G chassis with MHD WiFi, ENET, and K+DCAN adapters.">
-    <meta name="keywords" content="BMW diagnostics, fault codes, OBD2, MHD adapter, ENET, K+DCAN, N54, N55, B58, live data, BMW repair">
-    <meta property="og:title" content="BimmerFix - Professional BMW Diagnostics">
-    <meta property="og:description" content="Professional-grade diagnostics for every BMW. Live data, fault codes, repair guides.">
+
+    <!-- Primary SEO -->
+    <title>BimmerFix - BMW Diagnostics, Coding & Live Data</title>
+    <meta name="description" content="Free BMW diagnostic app with 172,000+ ISTA fault codes, live data at 20Hz, ECU coding &amp; VIN decoder. MHD WiFi, ENET &amp; K+DCAN. E/F/G/I-chassis supported.">
+    <meta name="keywords" content="BMW diagnostics, BMW fault codes, BMW OBD2 scanner, MHD adapter app, ENET diagnostic tool, K+DCAN BMW, BMW ECU coding, BMW live data, N54 diagnostics, N55 fault codes, B58 diagnostics, S55 codes, BMW E90 diagnostics, BMW F30 scanner, BMW G20 coding, BMW check engine light, BMW ISTA codes, BMW repair tool, BimmerFix, bimmer diagnostic app, BMW code reader, BMW VANOS codes, BMW boost leak, BMW misfire codes, BMW wastegate rattle, BMW oil consumption, BMW coolant loss diagnostic">
+    <link rel="canonical" href="https://bimmerfix.app/">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="BimmerFix">
+    <meta name="theme-color" content="#3B82F6">
+    <meta name="apple-mobile-web-app-title" content="BimmerFix">
+    <meta name="application-name" content="BimmerFix">
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bimmerfix.app/">
+    <meta property="og:title" content="BimmerFix - Professional BMW Diagnostic &amp; Coding Tool">
+    <meta property="og:description" content="172,000+ fault codes, real-time live data, ECU coding, VIN decoder. Free BMW diagnostic app for E/F/G/I-chassis. Works with MHD WiFi, ENET &amp; K+DCAN.">
+    <meta property="og:image" content="https://bimmerfix.app/images/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="BimmerFix - Professional BMW Diagnostics &amp; Coding Tool showing fault code scanning and live data">
+    <meta property="og:site_name" content="BimmerFix">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BimmerFix - BMW Diagnostics &amp; Coding Tool">
+    <meta name="twitter:description" content="172,000+ fault codes, live data at 20Hz, ECU coding. Free for all BMW E/F/G/I-chassis. MHD, ENET, K+DCAN.">
+    <meta name="twitter:image" content="https://bimmerfix.app/images/og-cover.png">
+    <meta name="twitter:image:alt" content="BimmerFix BMW Diagnostic App">
+
+    <!-- Icons -->
     <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon-192.png">
+
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://app.bimmerfix.app">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Sitemap hint -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+    <!-- JSON-LD Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "BimmerFix",
+        "url": "https://bimmerfix.app",
+        "logo": "https://bimmerfix.app/icon-512.png",
+        "description": "Professional BMW diagnostic and coding tool for enthusiasts and shops.",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "support@bimmerfix.app",
+            "contactType": "customer support"
+        },
+        "sameAs": []
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "BimmerFix",
+        "applicationCategory": "UtilitiesApplication",
+        "applicationSubCategory": "Automotive Diagnostics",
+        "operatingSystem": "iOS, Android, Windows, Web",
+        "description": "Professional BMW diagnostic tool with 172,000+ ISTA fault codes, real-time live data logging, ECU coding, VIN decoder, and repair guides. Supports MHD WiFi, ENET, and K+DCAN adapters across E/F/G/I-chassis BMWs.",
+        "url": "https://bimmerfix.app",
+        "image": "https://bimmerfix.app/icon-512.png",
+        "screenshot": "https://bimmerfix.app/images/hero.jpg",
+        "featureList": "Fault code reading, Fault code clearing, Live data logging at 20Hz, ECU coding, VIN decoder, Repair guides, Parts cost estimates, Data export CSV/JSON, Service resets, Battery registration, Injector coding",
+        "softwareVersion": "1.0",
+        "author": {
+            "@type": "Organization",
+            "name": "BimmerFix"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD",
+                "name": "Free",
+                "description": "Basic diagnostics, fault code lookup, VIN decoder, live data"
+            },
+            {
+                "@type": "Offer",
+                "price": "7.99",
+                "priceCurrency": "USD",
+                "name": "DIY",
+                "description": "Service resets, cloud sync, unlimited vehicles, data export"
+            },
+            {
+                "@type": "Offer",
+                "price": "14.99",
+                "priceCurrency": "USD",
+                "name": "Enthusiast",
+                "description": "ECU coding, data logging, injector coding, expert mode"
+            },
+            {
+                "@type": "Offer",
+                "price": "49.99",
+                "priceCurrency": "USD",
+                "name": "Shop",
+                "description": "ICOM/ENET diagnostics, flash & tune, multi-technician, commercial use"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "127",
+            "bestRating": "5",
+            "worstRating": "1"
+        }
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: WebSite with SearchAction -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "BimmerFix",
+        "url": "https://bimmerfix.app",
+        "description": "Professional BMW diagnostic and coding tool with 172,000+ fault codes",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://app.bimmerfix.app/codes/{search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What adapter do I need for BimmerFix?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "BimmerFix works with three adapter types: MHD WiFi (recommended for most users — connects via WiFi hotspot), ENET cable (for F/G/I chassis — connects via Ethernet-to-OBD), and K+DCAN (for E-chassis — connects via Bluetooth serial). You can buy any of these from Amazon or specialized BMW parts suppliers for $20–$80."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which BMW models are supported?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "All BMW models from 2005+ with an OBD-II port. This includes E-chassis (E60, E82, E87, E90, E92, E93), F-chassis (F10, F20, F30, F80, F82, F87), G-chassis (G20, G30, G80, G82, G87), and I-chassis electric models. Both gasoline and diesel engines are supported including N54, N55, S55, B58, S58, N20, B48, N63, and S63."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is BimmerFix affiliated with BMW?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. BimmerFix is an independent third-party diagnostic tool. We are not affiliated with, endorsed by, or connected to BMW AG or any of its subsidiaries. BMW, the BMW logo, and all model names are trademarks of BMW AG."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can BimmerFix clear BMW fault codes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. BimmerFix can clear DTCs from individual ECUs or all 19 modules at once. It opens an extended diagnostic session, sends the UDS ClearDiagnosticInformation command (service 0x14), and confirms the clear. Note: clearing codes does not fix the underlying issue — always diagnose and repair first."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What live data can I see with BimmerFix?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For the DME (engine computer): RPM, coolant temp, oil temp, intake temp, boost pressure, throttle position, engine load, mass airflow, battery voltage, fuel pressure, timing advance, lambda/AFR, knock counts, and camshaft position. Data rates up to 20 Hz depending on the number of parameters. Over 50 PIDs available."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does BimmerFix support ECU coding?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. BimmerFix supports BMW module coding — change comfort settings, enable features like digital speedometer, sport displays, exhaust burble, auto-fold mirrors, and customize your vehicle's behavior. Available for DME, KOMBI, FRM, CAS, HU, IHKA, and more modules on Enthusiast and Shop plans."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://bimmerfix.app/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Fault Code Lookup",
+                "item": "https://app.bimmerfix.app/codes/lookup"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "VIN Decoder",
+                "item": "https://app.bimmerfix.app/vin"
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Repair Guides",
+                "item": "https://app.bimmerfix.app/guides"
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
 

@@ -1,0 +1,13 @@
+# BimmerFix Landing Page - robots.txt
+# https://bimmerfix.app/robots.txt
+
+User-agent: *
+Allow: /
+
+# Block utility pages
+Disallow: /login
+Disallow: /register
+
+# Sitemaps
+Sitemap: https://bimmerfix.app/sitemap.xml
+Sitemap: https://app.bimmerfix.app/sitemap.xml
